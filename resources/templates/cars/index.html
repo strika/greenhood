@@ -1,0 +1,10 @@
+{{< templates/layout.html}}
+{{%body}}
+<h1>Cars</h1>
+
+<ul>
+  {{#cars}}
+  <li>{{manufacturer}} {{model}}, {{manufactured-at}}</li>
+  {{/cars}}
+</ul>
+{{/body}}
