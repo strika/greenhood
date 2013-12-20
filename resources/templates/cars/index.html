@@ -4,7 +4,7 @@
 
 <ul>
   {{#cars}}
-  <li>{{manufacturer}} {{model}}, {{manufactured-at}}</li>
+  <li><a href="{{ route-for :car-show { :id id} }}">{{manufacturer}} {{model}}, {{manufactured-at}}</a></li>
   {{/cars}}
 </ul>
 {{/body}}

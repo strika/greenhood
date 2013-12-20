@@ -8,3 +8,12 @@
     (controller/render 
       (assoc request 
              :cars cars))))
+
+(defn show
+  [request]
+  (let [id (-> request :params :id)
+        car (model/pick :car
+              {:where {:id id}})]
+    (controller/render
+      (assoc request
+              :car car))))
